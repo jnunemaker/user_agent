@@ -174,6 +174,25 @@ class UserAgent
     end
   end
 
+  def self.device_type(string)
+    case string
+      when Platform::WindowsPhone  then :phone
+      when Platform::Windows       then :computer
+      when Platform::Mac           then :computer
+      when Platform::Android       then /mobile/i =~ string ? :phone : :tablet
+      when Platform::Blackberry    then :phone
+      when Platform::Linux         then :computer
+      when Platform::Wii           then :console
+      when Platform::Playstation   then :console
+      when Platform::Ipad          then :tablet
+      when Platform::Ipod          then :misc
+      when Platform::Iphone        then :phone
+      when Platform::Symbian       then :phone
+      else
+        :unknown
+    end
+  end
+
   attr_reader :source
 
   def initialize(source)
@@ -202,6 +221,10 @@ class UserAgent
 
   def platform
     @platform ||= self.class.platform(source)
+  end
+
+  def device_type
+    @device_type ||= self.class.device_type(source)
   end
 
   def mobile?

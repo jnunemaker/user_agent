@@ -114,4 +114,13 @@ describe UserAgent do
       a.should_not == b
     end
   end
+
+  describe "#device_type" do
+    it "can distinguish Android tablets from Android phones" do
+      phone = 'Mozilla/5.0 (Linux; U; Android 2.2; en-us; Nexus One Build/FRF91) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1'
+      UserAgent.device_type(phone).should == :phone
+      tablet = 'Mozilla/5.0 (Linux; U; Android 3.0; en-us; Xoom Build/HRI39) AppleWebKit/534.13 (KHTML, like Gecko) Version/4.0 Safari/534.13'
+      UserAgent.device_type(tablet).should == :tablet
+    end
+  end
 end
