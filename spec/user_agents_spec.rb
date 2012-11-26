@@ -25,7 +25,7 @@ describe UserAgent do
   test true,  :safari,     '4.0.4',        :ipad,        'iPad OS 3.2',    :webkit,    '531.21.10',  'Mozilla/5.0 (iPad; U; CPU iPhone OS 3_2 like Mac OS X; en-us) AppleWebKit/531.21.10 (KHTML, like Gecko) Version/4.0.4 Mobile/7B314 Safari/531.21.10'
   test true,  :safari,     '4.0',          :iphone,      'iPhone OS 3.0',  :webkit,    '528.18',     'Mozilla/5.0 (iPhone; U; CPU iPhone OS 3_0 like Mac OS X; en-us) AppleWebKit/528.18 (KHTML, like Gecko) Version/4.0 Mobile/7A341 Safari/528.16'
   test true,  :safari,     '4.0',          :android,     'Linux',          :webkit,    '533.1',      'Mozilla/5.0 (Linux; U; Android 2.2; en-us; Nexus One Build/FRF91) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1'
-  test false, :ie,         '8.0',          :windows,     'Windows 7',      :msie,      '8.0',        'Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.2; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0)'
+  test false, :ie,         '8.0',          :windows,     'Windows 7',      :msie,      '8.0',        'Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0)'
   test false, :ie,         '7.0b',         :windows,     'Windows 2003',   :msie,      '7.0b',       'Mozilla/4.0 (compatible; MSIE 7.0b; Windows NT 5.2; .NET CLR 1.1.4322; .NET CLR 2.0.50727; InfoPath.2; .NET CLR 3.0.04506.30)'
   test false, :ie,         '7.0',          :windows,     'Windows XP',     :msie,      '7.0',        'Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; .NET CLR 1.1.4322; .NET CLR 2.0.50727; InfoPath.2)'
   test false, :ie,         '7.0',          :windows,     'Windows XP',     :msie,      '7.0',        'Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; .NET CLR 1.1.4322; .NET CLR 2.0.50727; InfoPath.2; MSOffice 12)'
@@ -67,5 +67,6 @@ describe UserAgent do
   test true,  :iemobile,   nil,            :windows_phone, 'Windows Phone', :msie,     '6.0',        'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; Windows Phone 6.5.3.5)'
   test true,  :iemobile,   '7.0',          :windows_phone, 'Windows Phone', :msie,     '7.0',        'Mozilla/4.0 (compatible; MSIE 7.0; Windows Phone OS 7.0; Trident/3.1; IEMobile/7.0; HTC; 7 Mozart; Orange)'
   test true,  :safari,     nil,            :symbian,     'Symbian OS',     :webkit,    '413',        'Mozilla/5.0 (SymbianOS/9.2; U; Series60/3.1 NokiaE71-3/300.21.012; Profile/MIDP-2.0 Configuration/CLDC-1.1 ) AppleWebKit/413 (KHTML, like Gecko) Safari/413'
+  test false, :ie,         '10.0',         :windows,     'Windows 8',      :msie,      '10.0',       'Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0)'
 
 end
