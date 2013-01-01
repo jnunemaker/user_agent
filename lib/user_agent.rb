@@ -39,8 +39,9 @@ class UserAgent
   end
 
   module OS
+    Windows8      = /windows nt 6\.2/i
+    Windows7      = /windows nt 6\.1/i
     WindowsVista  = /windows nt 6\.0/i
-    Windows7      = /windows nt 6\.\d+/i
     Windows2003   = /windows nt 5\.2/i
     WindowsXP     = /windows nt 5\.1/i
     Windows2000   = /windows nt 5\.0/i
@@ -138,6 +139,7 @@ class UserAgent
       when OS::WindowsPhone  then 'Windows Phone'
       when OS::WindowsVista  then 'Windows Vista'
       when OS::Windows7      then 'Windows 7'
+      when OS::Windows8      then 'Windows 8'
       when OS::Windows2003   then 'Windows 2003'
       when OS::WindowsXP     then 'Windows XP'
       when OS::Windows2000   then 'Windows 2000'
